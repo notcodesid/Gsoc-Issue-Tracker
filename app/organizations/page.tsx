@@ -1,6 +1,6 @@
-// import { SearchBar } from '@/components/organizations/search-bar';
+import { SearchBar } from '@/components/organizations/search-bar';
 import { Sidebar } from '@/components/organizations/sidebar';
-// import { OrganizationGrid } from '@/components/organizations/organization-grid';
+import { OrganizationGrid } from '@/components/organizations/OrganizationGrid';
 
 export default function OrganizationsPage() {
   return (
@@ -8,8 +8,8 @@ export default function OrganizationsPage() {
       <Sidebar />
       <main className="flex-1 p-6 overflow-auto">
         <div className="max-w-6xl mx-auto">
-          {/* <SearchBar /> */}
-          {/* <OrganizationGrid /> */}
+          <SearchBar />
+          <OrganizationGrid />
         </div>
       </main>
     </div>
