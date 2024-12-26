@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import Appbar from './appbar';
+
 
 export function LandingPage() {
     return (
+        <>
+        <Appbar />
         <div className="min-h-screen bg-background flex justify-center items-center">
             <div className="container mx-auto px-4 py-16">
                 <div className="max-w-3xl mx-auto text-center">
@@ -20,5 +24,6 @@ export function LandingPage() {
                 </div>
             </div>
         </div>
+        </>
     );
 }

@@ -4,6 +4,7 @@ import { Sidebar } from '@/components/organizations/sidebar';
 import { OrganizationGrid } from '@/components/organizations/OrganizationGrid';
 import { useOrganizationsFilter } from '@/hooks/useOrganizationsFilter';
 import { organizations } from '@/lib/data/organizations';
+import Appbar from '@/components/appbar';
 
 export default function OrganizationsPage() {
   const {
@@ -15,6 +16,8 @@ export default function OrganizationsPage() {
   } = useOrganizationsFilter(organizations);
 
   return (
+    <>
+    <Appbar />
     <div className="flex h-screen">
       <Sidebar 
         activeFilters={activeFilters}
@@ -30,5 +33,6 @@ export default function OrganizationsPage() {
         </div>
       </main>
     </div>
+    </>
   );
 }
