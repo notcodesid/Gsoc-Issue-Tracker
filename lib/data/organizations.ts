@@ -1,3 +1,19 @@
+// Helper function to generate random years
+const getRandomYears = () => {
+    const allYears = ['2020', '2021', '2022', '2023', '2024'];
+    const numYears = Math.floor(Math.random() * 3) + 1; // 1-3 years
+    const years: string[] = [];
+    
+    while (years.length < numYears) {
+      const randomYear = allYears[Math.floor(Math.random() * allYears.length)];
+      if (!years.includes(randomYear)) {
+        years.push(randomYear);
+      }
+    }
+    
+    return years.sort((a, b) => b.localeCompare(a)); // Sort descending
+  };
+
 
 export const organizations = [
   {
@@ -7,6 +23,7 @@ export const organizations = [
     technologies: ['Python', 'C++', 'CUDA'],
     openIssues: 42,
     url: 'https://tensorflow.org',
+    years: getRandomYears(),
   },
   {
     name: 'Apache Foundation',
@@ -15,6 +32,7 @@ export const organizations = [
     technologies: ['Java', 'Python', 'Go'],
     openIssues: 156,
     url: 'https://apache.org',
+    years: getRandomYears(),
   },
   {
     name: 'Mozilla',
@@ -23,6 +41,7 @@ export const organizations = [
     technologies: ['Rust', 'JavaScript', 'C++'],
     openIssues: 89,
     url: 'https://mozilla.org',
+    years: getRandomYears(),
   },
   {
     name: 'Linux Foundation',
@@ -31,6 +50,7 @@ export const organizations = [
     technologies: ['C', 'Assembly', 'Shell'],
     openIssues: 234,
     url: 'https://linuxfoundation.org',
+    years: getRandomYears(),
   },
   {
     name: 'Django',
@@ -39,6 +59,7 @@ export const organizations = [
     technologies: ['Python', 'JavaScript', 'HTML'],
     openIssues: 178,
     url: 'https://djangoproject.com',
+    years: getRandomYears(),
   },
   {
     name: 'React',
@@ -47,6 +68,7 @@ export const organizations = [
     technologies: ['JavaScript', 'TypeScript', 'CSS'],
     openIssues: 324,
     url: 'https://reactjs.org',
+    years: getRandomYears(),
   },
   {
     name: 'Vue.js',
@@ -55,6 +77,7 @@ export const organizations = [
     technologies: ['JavaScript', 'TypeScript', 'HTML'],
     openIssues: 167,
     url: 'https://vuejs.org',
+    years: getRandomYears(),
   },
   {
     name: 'PostgreSQL',
@@ -63,6 +86,7 @@ export const organizations = [
     technologies: ['C', 'SQL', 'Python'],
     openIssues: 198,
     url: 'https://postgresql.org',
+    years: getRandomYears(),
   },
   {
     name: 'Kubernetes',
@@ -71,6 +95,7 @@ export const organizations = [
     technologies: ['Go', 'Docker', 'YAML'],
     openIssues: 456,
     url: 'https://kubernetes.io',
+    years: getRandomYears(),
   },
   {
     name: 'Node.js',
@@ -79,6 +104,7 @@ export const organizations = [
     technologies: ['JavaScript', 'C++', 'Python'],
     openIssues: 267,
     url: 'https://nodejs.org',
+    years: getRandomYears(),
   },
   {
     name: 'Flutter',
@@ -87,6 +113,7 @@ export const organizations = [
     technologies: ['Dart', 'C++', 'Java'],
     openIssues: 389,
     url: 'https://flutter.dev',
+    years: getRandomYears(),
   },
   {
     name: 'Rust Foundation',
@@ -95,6 +122,7 @@ export const organizations = [
     technologies: ['Rust', 'C++', 'LLVM'],
     openIssues: 145,
     url: 'https://foundation.rust-lang.org',
+    years: getRandomYears(),
   },
   {
     name: 'Python Software Foundation',
@@ -103,6 +131,7 @@ export const organizations = [
     technologies: ['Python', 'C', 'Shell'],
     openIssues: 234,
     url: 'https://python.org',
+    years: getRandomYears(),
   },
   {
     name: 'GitLab',
@@ -111,6 +140,7 @@ export const organizations = [
     technologies: ['Ruby', 'Go', 'Vue.js'],
     openIssues: 567,
     url: 'https://gitlab.com',
+    years: getRandomYears(),
   },
   {
     name: 'Jenkins',
@@ -119,6 +149,7 @@ export const organizations = [
     technologies: ['Java', 'Groovy', 'JavaScript'],
     openIssues: 234,
     url: 'https://jenkins.io',
+    years: getRandomYears(),
   },
   {
     name: 'Elastic',
@@ -127,6 +158,7 @@ export const organizations = [
     technologies: ['Java', 'Go', 'JavaScript'],
     openIssues: 432,
     url: 'https://elastic.co',
+    years: getRandomYears(),
   },
   {
     name: 'OpenAI',
@@ -135,6 +167,7 @@ export const organizations = [
     technologies: ['Python', 'C++', 'CUDA'],
     openIssues: 178,
     url: 'https://openai.com',
+    years: getRandomYears(),
   },
   {
     name: 'Debian',
@@ -143,6 +176,7 @@ export const organizations = [
     technologies: ['C', 'C++', 'Python'],
     openIssues: 876,
     url: 'https://debian.org',
+    years: getRandomYears(),
   },
   {
     name: 'GNOME Foundation',
@@ -151,6 +185,7 @@ export const organizations = [
     technologies: ['C', 'JavaScript', 'Python'],
     openIssues: 345,
     url: 'https://gnome.org',
+    years: getRandomYears(),
   },
   {
     name: 'Eclipse Foundation',
@@ -159,6 +194,7 @@ export const organizations = [
     technologies: ['Java', 'C++', 'JavaScript'],
     openIssues: 567,
     url: 'https://eclipse.org',
+    years: getRandomYears(),
   },
   {
     name: 'FreeBSD',
@@ -167,5 +203,6 @@ export const organizations = [
     technologies: ['C', 'Assembly', 'Shell'],
     openIssues: 432,
     url: 'https://freebsd.org',
+    years: getRandomYears(),
   }
 ];

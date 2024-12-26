@@ -5,4 +5,5 @@ export interface Organization {
     technologies: string[];
     openIssues: number;
     url: string;
+    years: string[]; // Add years field
   }

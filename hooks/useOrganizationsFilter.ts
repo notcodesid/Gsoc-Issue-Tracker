@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Organization } from '@/types';
+import { Organization } from '../types';
 
 interface Filters {
   years: string[];
@@ -26,9 +26,11 @@ export function useOrganizationsFilter(organizations: Organization[]) {
       const techStackMatch = activeFilters.techStacks.length === 0 ||
         org.technologies.some(tech => activeFilters.techStacks.includes(tech));
 
-      // For demo purposes, we'll consider all orgs match year/category filters
-      // In a real app, you'd have these properties in your Organization type
-      const yearMatch = activeFilters.years.length === 0;
+      // Year filter
+      const yearMatch = activeFilters.years.length === 0 ||
+        org.years.some(year => activeFilters.years.includes(year));
+
+      // Category filter (demo purposes)
       const categoryMatch = activeFilters.categories.length === 0;
 
       return searchMatch && techStackMatch && yearMatch && categoryMatch;

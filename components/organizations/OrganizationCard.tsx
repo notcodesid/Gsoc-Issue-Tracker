@@ -1,6 +1,6 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { ExternalLink, GitFork } from 'lucide-react';
+import { ExternalLink, GitFork, Calendar } from 'lucide-react';
 import Image from 'next/image';
 
 interface OrganizationCardProps {
@@ -10,6 +10,7 @@ interface OrganizationCardProps {
   technologies: string[];
   openIssues: number;
   url: string;
+  years: string[];
 }
 
 export function OrganizationCard({
@@ -19,6 +20,7 @@ export function OrganizationCard({
   technologies,
   openIssues,
   url,
+  years,
 }: OrganizationCardProps) {
   return (
     <Card className="hover:shadow-lg transition-shadow">
@@ -54,9 +56,15 @@ export function OrganizationCard({
             </Badge>
           ))}
         </div>
-        <div className="flex items-center text-sm text-muted-foreground">
-          <GitFork className="h-4 w-4 mr-1" />
-          {openIssues} open issues
+        <div className="flex items-center justify-between text-sm text-muted-foreground">
+          <div className="flex items-center">
+            <GitFork className="h-4 w-4 mr-1" />
+            {openIssues} open issues
+          </div>
+          <div className="flex items-center">
+            <Calendar className="h-4 w-4 mr-1" />
+            {years.join(', ')}
+          </div>
         </div>
       </CardContent>
     </Card>
