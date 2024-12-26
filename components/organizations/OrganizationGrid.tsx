@@ -1,7 +1,11 @@
 import { OrganizationCard } from '@/components/organizations/OrganizationCard';
-import { organizations } from '@/lib/data/organizations';
+import { Organization } from '@/types';
 
-export function OrganizationGrid() {
+interface OrganizationGridProps {
+  organizations: Organization[];
+}
+
+export function OrganizationGrid({ organizations }: OrganizationGridProps) {
   return (
     <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {organizations.map((org) => (
